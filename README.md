@@ -1,7 +1,7 @@
 # alexcarl98.github.io
 Test Website for Github Projects
-
-![Index](index.html)
+<!-- 
+![Index](index.html) -->
 
 <!-- 
 ## AI / ML
