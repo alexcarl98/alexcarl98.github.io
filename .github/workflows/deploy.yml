@@ -31,10 +31,14 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm cache clean --force
+          npm install
         
       - name: Build
-        run: npm run build
+        run: |
+          rm -rf dist
+          npm run build
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
