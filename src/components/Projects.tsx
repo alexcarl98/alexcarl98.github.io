@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react';
 import { FaGithub, FaStar } from 'react-icons/fa';
 import { BiGitRepoForked } from 'react-icons/bi';
+import rat from '../assets/rat.png';
+import lane from '../assets/lanevisn.jpg';
+import lbm from '../assets/lbm.gif';
 
 interface ProjectItem {
   title: string;
   date: string;
   description: string;
   technologies: string[];
+  thumbnail: string;
   link?: string;
 }
 
@@ -16,6 +20,7 @@ interface GitHubRepo {
   html_url: string;
   stargazers_count: number;
   forks_count: number;
+  thumbnail: string;
   language: string;
   topics: string[];
   updated_at: string;
@@ -26,9 +31,18 @@ const Projects = () => {
 
   const projects: ProjectItem[] = [
     {
+      title: "2D Lattice Boltzmann Solver",
+      date: "November 2024 - December 2024",
+      description: "Developed a 2D Lattice Boltzmann Solver in C++ to simulate fluid dynamics, achieving high accuracy and performance through parallelization and optimized data structures.",
+      thumbnail: lbm,
+      technologies: ["C++", "Python"],
+      link: "https://github.com/alexcarl98/2D-Lattice-Boltzmann-solver"
+    },
+    {
       title: "rat",
       date: "January 2024 – Present",
       description: "Led creation of a statically typed programming language merging Python's syntactic elegance with C's performance.",
+      thumbnail: rat,
       technologies: ["JavaScript", "Node.js"],
       link: "https://github.com/conda-language/rat"
     },
@@ -36,8 +50,9 @@ const Projects = () => {
       title: "lane-detection",
       date: "December 2023 – Present",
       description: "Developed an AI-based application using OpenCV and Python to detect lane lines from dashcam videos.",
+      thumbnail: lane,
       technologies: ["Python", "OpenCV"],
-      link: "https://github.com/joanna-estrada/lane-detection"
+      link: "https://github.com/alexcarl98/EnhancedLaneVision"
     },
   ];
 
@@ -73,6 +88,14 @@ const Projects = () => {
           
           return (
             <div key={project.title} className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white dark:bg-gray-800">
+              <div className="w-full h-48 overflow-hidden">
+                <img 
+                  src={project.thumbnail} 
+                  alt={`${project.title} thumbnail`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold">
