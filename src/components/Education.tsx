@@ -31,7 +31,7 @@ interface EducationItem {
           <div key={index} className="mb-4">
             <h3 className="text-xl font-semibold">{edu.school}</h3>
             <p>{edu.degree}; GPA: {edu.gpa}</p>
-            <p className="text-gray-600">{edu.period}</p>
+            <p className="text-gray-600 dark:text-gray-400">{edu.period}</p>
             <p><strong>Relevant Coursework: </strong>{edu.coursework}</p>
           </div>
         ))}
