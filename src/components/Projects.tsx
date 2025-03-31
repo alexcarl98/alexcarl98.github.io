@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaGithub, FaStar, FaCodeBranch } from 'react-icons/fa';
+import { FaGithub, FaStar } from 'react-icons/fa';
 import { BiGitRepoForked } from 'react-icons/bi';
 
 interface ProjectItem {

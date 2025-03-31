@@ -1,3 +1,6 @@
+/* Import Inter font - moved to top */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,6 +59,3 @@
     @apply transition-all duration-300 hover:tracking-wider;
   }
 }
-
-/* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
