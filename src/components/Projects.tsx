@@ -3,7 +3,7 @@ import { FaGithub, FaStar } from 'react-icons/fa';
 import { BiGitRepoForked } from 'react-icons/bi';
 import rat from '../assets/rat.png';
 import lane from '../assets/lanevisn.jpg';
-import lbm from '../assets/lbm.gif';
+import lbm from '../assets/LBM.gif';
 
 interface ProjectItem {
   title: string;
