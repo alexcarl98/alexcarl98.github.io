@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply min-h-screen bg-[#703c3c];
+  }
+}
+
+/* If you want to add custom styles, use @layer components */
+@layer components {
+  .btn {
+    @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium 
+           transition-colors hover:border-blue-500;
+  }
+}
+
+/* For custom utilities, use @layer utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
